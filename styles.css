@@ -2,7 +2,7 @@ img  {
     max-width:80%;
 }
 body {
-    background-image: url('Background.gif')
+    background-image: url("Background.gif")
     background-color:black;
 }
 h1   {
