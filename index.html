@@ -15,17 +15,16 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
         <img id="toggle-icon" src="icon-light.png" alt="Toggle Mode"> <!-- Default icon -->
     </button>
-
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const icon = document.getElementById('toggle-icon');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.src = 'icon-dark.png';
-            } else {
-                icon.src = 'icon-light.png';
-            }
-        }
-    </script>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <img src="menu.png" alt="Menu">
+    </button>
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="https://www.instagram.com/arnavsachdevaa" target="_blank">My Instagram</a></li>
+            <li><a href="#">My Facebook</a></li>
+            <li><a href="mailto:me@arnavsachdeva.com">Email Me</a></li>
+        </ul>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
