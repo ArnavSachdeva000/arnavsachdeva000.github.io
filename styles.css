@@ -35,6 +35,17 @@ img {
     max-width: 300px;
     height: auto;
     margin-bottom: 20px;
+    transition: border 0.3s;
+}
+
+/* Add border in dark mode */
+.dark-mode img {
+    border: 5px solid #ffffff;
+}
+
+/* Remove border in light mode */
+body:not(.dark-mode) img {
+    border: none;
 }
 
 .dark-mode-toggle {
