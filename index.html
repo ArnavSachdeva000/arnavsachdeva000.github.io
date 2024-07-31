@@ -4,68 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Sachdeva</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            transition: background-color 0.3s, color 0.3s;
-            position: relative;
-        }
-        .dark-mode {
-            background-color: #ffffff;
-            color: #121212;
-        }
-        h1 {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 3em;
-            text-shadow: 2px 2px #ff00ff;
-            margin: 20px;
-        }
-        img {
-            border-radius: 10px;
-            width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .dark-mode-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .dark-mode-toggle img {
-            width: 24px;
-            height: 24px;
-            transition: filter 0.3s;
-        }
-        .dark-mode .dark-mode-toggle img {
-            filter: invert(1);
-        }
-    </style>
+    <!-- Link to the favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
 </head>
 <body>
     <img src="XwEZzmyu7yQ.jpg" alt="Arnav Sachdeva">
     <h1>Arnav Sachdeva</h1>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-        <img src="https://img.icons8.com/ios-filled/50/000000/sun.png" alt="Toggle Mode">
+        <img id="toggle-icon" src="icon-light.png" alt="Toggle Mode"> <!-- Default icon -->
     </button>
 
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('toggle-icon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.src = 'icon-dark.png';
+            } else {
+                icon.src = 'icon-light.png';
+            }
         }
     </script>
 </body>
