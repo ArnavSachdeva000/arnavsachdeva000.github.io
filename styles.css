@@ -1,3 +1,4 @@
+/* General styles */
 body {
     background-color: #121212;
     color: #ffffff;
@@ -10,6 +11,7 @@ body {
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
     position: relative;
+    padding: 10px;
 }
 
 .dark-mode {
@@ -19,20 +21,22 @@ body {
 
 h1 {
     font-family: 'Brush Script MT', cursive;
-    font-size: 3em;
+    font-size: 2em; /* Adjusted for better readability on mobile */
     text-shadow: 2px 2px #ff00ff;
     margin: 20px;
+    text-align: center;
 }
 
 img {
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px; /* Limit the maximum width of the image */
     height: auto;
     margin-bottom: 20px;
 }
 
 .dark-mode-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     background-color: transparent;
@@ -48,4 +52,27 @@ img {
     width: 24px;
     height: 24px;
     transition: opacity 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size on smaller screens */
+    }
+
+    .dark-mode-toggle img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further reduction for very small screens */
+    }
+
+    .dark-mode-toggle img {
+        width: 18px;
+        height: 18px;
+    }
 }
