@@ -20,38 +20,44 @@ body {
     color: #121212;
 }
 
-h1 {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 2em;
-    text-shadow: 2px 2px #ff00ff;
-    margin: 20px;
-    text-align: center;
-    word-wrap: break-word;
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing as needed */
+    margin-bottom: 20px;
 }
 
-img {
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px;
+.profile-pic {
+    border-radius: 50%;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    object-fit: cover;
     transition: border 0.3s;
 }
 
 /* Add border in dark mode */
-.dark-mode img {
+.dark-mode .profile-pic {
     border: 5px solid #ffffff;
 }
 
 /* Remove border in light mode */
-body:not(.dark-mode) img {
+body:not(.dark-mode) .profile-pic {
     border: none;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2em;
+    text-shadow: 2px 2px #ff00ff;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .dark-mode-toggle {
     position: fixed;
     top: 20px;
-    right: 60px; /* Adjusted position for clarity */
+    right: 60px;
     background-color: transparent;
     border: none;
     cursor: pointer;
